@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH-Tube</title>
+    <!-- link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/da72d6e058.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="w-11/12 mx-auto mt-10">
+      <nav class="flex justify-between items-center border-b pb-5">
+        <div>
+          <img src="images/Logo.png" alt="" />
+        </div>
+        <div>
+          <div">
+          <input
+            id="search-input"
+            type="text"
+            class="border-2 p-2 rounded-md"
+            placeholder="type your input"
+          />
+          <button onclick="loadHandalSearchVideo()" class="btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <div>
+          <button class="btn bg-red-500">Blog</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- category -->
+      <div
+        id="categoris"
+        class="flex justify-center items-center gap-5 mt-5"
+      ></div>
+
+      <div
+        id="card-container"
+        class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-5"
+      ></div>
+      <div
+        id="noData"
+        class="hidden w-2/3 mx-auto h-[400px] rounded-xl border-2 text-center border-red-300 mt-5"
+      >
+        <div class="flex justify-center mt-20">
+          <img src="images/Icon.png" />
+        </div>
+        <p class="font-bold text-2xl">Oops!! Sorry, There is no content here</p>
+      </div>
+    </main>
+    <!-- modal -->
+    <!-- Open the modal using ID.showModal() method -->
+    <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div id="modal-container" class="modal-box">
+        
+      </div>
+    </dialog>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
